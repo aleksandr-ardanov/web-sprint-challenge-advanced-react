@@ -5,7 +5,8 @@ import axios from 'axios';
 import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
-
+import LightMode from './components/added/LightMode'
+import useDarkMode from './hooks/useDarkMode'
 import "./App.css";
 
 function App() {
@@ -22,9 +23,12 @@ function App() {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
 
+  const [light, setLight] = useDarkMode(false);
+
   return (
-    <div>
+    <div className={light ? 'light-mode' : ''}>
       <Router>
+              <LightMode light={light} setLight={setLight}/>
         <nav className="container">
           <h1>
             React Plants <span role="img">🌿</span>

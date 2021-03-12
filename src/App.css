@@ -251,3 +251,31 @@ pre {
   color: #0e101c;
   border-bottom: 2px solid !important;
 }
+
+.lightModeToggle {
+  margin-top: 1%;
+  margin-left: 90%;
+  background: #eceae0;
+  border-radius: 30px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+.toggle {
+  background: #ec5990;
+  border-radius: 30px;
+  height: 18px;
+  left: 0;
+  position: relative;
+  transition: 0.2s;
+  width: 20px;
+}
+.lightModeOn {
+  left: 18px;
+}
+
+.light-mode {
+  background-color: #eceae0;
+  color: #313843;
+}

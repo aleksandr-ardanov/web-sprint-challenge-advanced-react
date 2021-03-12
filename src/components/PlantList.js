@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import SearchBar from "./added/SearchBar";
 
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
@@ -33,6 +34,7 @@ export default class PlantList extends Component {
 
     return (
       <main className="plant-list">
+        <SearchBar />
         {this.state?.plants?.map((plant) => (
           <div className="plant-card" key={plant.id} data-testid="plant-card">
             <img className="plant-image" src={plant.img} alt={plant.name} />
